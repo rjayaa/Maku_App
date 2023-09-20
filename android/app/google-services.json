@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "664453001269",
+    "project_id": "makuapp-8ac4c",
+    "storage_bucket": "makuapp-8ac4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664453001269:android:228d46eed6efd5d03b017c",
+        "android_client_info": {
+          "package_name": "com.maku.makuApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRQcZfW-vLXfVaaEg-lfPokpMtzSRl-hQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
