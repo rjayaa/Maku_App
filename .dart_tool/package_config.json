@@ -62,6 +62,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///C:/flutter%20sdk/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///C:/Users/rjayaa/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
       "packageUri": "lib/",
@@ -92,10 +98,22 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "pinput",
+      "rootUri": "file:///C:/Users/rjayaa/AppData/Local/Pub/Cache/hosted/pub.dev/pinput-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/flutter%20sdk/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "smart_auth",
+      "rootUri": "file:///C:/Users/rjayaa/AppData/Local/Pub/Cache/hosted/pub.dev/smart_auth-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "source_span",
@@ -134,6 +152,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "universal_platform",
+      "rootUri": "file:///C:/Users/rjayaa/AppData/Local/Pub/Cache/hosted/pub.dev/universal_platform-1.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///C:/Users/rjayaa/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -152,7 +176,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-09-25T18:14:42.847297Z",
+  "generated": "2023-09-25T18:50:05.752723Z",
   "generator": "pub",
   "generatorVersion": "3.1.2"
 }
