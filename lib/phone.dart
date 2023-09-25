@@ -8,6 +8,15 @@ class MyPhone extends StatefulWidget {
 }
 
 class _MyPhoneState extends State<MyPhone> {
+  TextEditingController numberCode = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    numberCode.text = "+62";
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +27,14 @@ class _MyPhoneState extends State<MyPhone> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset(
+                'assets/img1.png',
+                width: 150,
+                height: 150,
+              ),
+              SizedBox(
+                height: 25,
+              ),
               Text(
                 'Phone Verification',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -33,13 +50,51 @@ class _MyPhoneState extends State<MyPhone> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 15,
+                height: 20,
+              ),
+              Container(
+                height: 55,
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 10,
+                    ),
+                    SizedBox(
+                      width: 40,
+                      child: TextField(
+                        controller: numberCode,
+                        decoration: InputDecoration(border: InputBorder.none),
+                      ),
+                    ),
+                    Text(
+                      "|",
+                      style: TextStyle(fontSize: 33, color: Colors.grey),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none, hintText: "Phone"),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
               ),
               SizedBox(
                 height: 35,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "otp");
+                  },
                   child: Text('Send the code'),
                   style: ElevatedButton.styleFrom(
                       primary: Colors.green.shade700,
