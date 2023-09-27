@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class MyPhone extends StatefulWidget {
@@ -9,7 +10,7 @@ class MyPhone extends StatefulWidget {
 
 class _MyPhoneState extends State<MyPhone> {
   TextEditingController numberCode = TextEditingController();
-
+  var phone = "";
   @override
   void initState() {
     // TODO: implement initState
@@ -78,6 +79,10 @@ class _MyPhoneState extends State<MyPhone> {
                     ),
                     Expanded(
                       child: TextField(
+                        keyboardType: TextInputType.phone,
+                        onChanged: (value) {
+                          phone = value;
+                        },
                         decoration: InputDecoration(
                             border: InputBorder.none, hintText: "Phone"),
                       ),
@@ -92,8 +97,18 @@ class _MyPhoneState extends State<MyPhone> {
                 height: 35,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, "otp");
+                  onPressed: () async {
+                    await FirebaseAuth.instance.verifyPhoneNumber(
+                      phoneNumber: '${numberCode.text + phone}',
+                      verificationCompleted:
+                          (PhoneAuthCredential credential) {},
+                      verificationFailed: (FirebaseAuthException e) {},
+                      codeSent: (String verificationId, int? resendToken) {
+                        Navigator.pushNamed(context, "otp");
+                      },
+                      codeAutoRetrievalTimeout: (String verificationId) {},
+                    );
+                    //
                   },
                   child: Text('Send the code'),
                   style: ElevatedButton.styleFrom(

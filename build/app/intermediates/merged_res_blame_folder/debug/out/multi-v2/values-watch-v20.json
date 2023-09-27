@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.maku.maku_app-mergeDebugResources-14:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.maku.maku_app-mergeDebugResources-15:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "C:\\Users\\rjayaa\\.gradle\\caches\\transforms-3\\1f9c1e57b7cc9305c8c10d59dd3b2db9\\transformed\\jetified-play-services-auth-20.4.0\\res\\values-watch-v20\\values.xml",
