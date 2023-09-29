@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:maku_app/login.dart';
+import 'package:maku_app/Screen/loginScreen.dart';
+
 import 'package:pinput/pinput.dart';
 
 class MyOtp extends StatefulWidget {

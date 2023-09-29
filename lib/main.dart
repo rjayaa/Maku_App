@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:maku_app/home.dart';
-import 'package:maku_app/otp.dart';
-import 'package:maku_app/login.dart';
+import 'package:maku_app/Screen/homeScreen.dart';
+import 'package:maku_app/Screen/loginScreen.dart';
+import 'package:maku_app/Screen/otpScreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
