@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:maku_app/phone.dart';
+import 'package:maku_app/login.dart';
 import 'package:pinput/pinput.dart';
 
 class MyOtp extends StatefulWidget {
@@ -104,7 +104,8 @@ class _MyOtpState extends State<MyOtp> {
                     try {
                       PhoneAuthCredential credential =
                           PhoneAuthProvider.credential(
-                              verificationId: MyPhone.verify, smsCode: code);
+                              verificationId: LoginScreen.verify,
+                              smsCode: code);
 
                       // Sign the user in (or link) with the credential
                       await auth.signInWithCredential(credential);

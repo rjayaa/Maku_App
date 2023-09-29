@@ -1,16 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class MyPhone extends StatefulWidget {
-  const MyPhone({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   static String verify = "";
 
   @override
-  State<MyPhone> createState() => _MyPhoneState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _MyPhoneState extends State<MyPhone> {
+class _LoginScreenState extends State<LoginScreen> {
   TextEditingController numberCode = TextEditingController();
   var phone = "";
   @override
@@ -106,7 +106,7 @@ class _MyPhoneState extends State<MyPhone> {
                           (PhoneAuthCredential credential) {},
                       verificationFailed: (FirebaseAuthException e) {},
                       codeSent: (String verificationId, int? resendToken) {
-                        MyPhone.verify = verificationId;
+                        LoginScreen.verify = verificationId;
                         Navigator.pushNamed(context, "otp");
                       },
                       codeAutoRetrievalTimeout: (String verificationId) {},
