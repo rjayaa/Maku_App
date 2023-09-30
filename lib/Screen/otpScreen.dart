@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:maku_app/Screen/loginScreen.dart';
+import 'package:maku_app/screen/loginScreen.dart';
 
 import 'package:pinput/pinput.dart';
 
