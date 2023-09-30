@@ -23,23 +23,6 @@ class _MyHomeState extends State<MyHome> {
     'Dapur 5',
     'Dapur 6'
   ]; // Ganti dengan judul yang sesuai
-
-  circularProgress() {
-    return Center(child: CircularProgressIndicator());
-  }
-
-  Future<void> _fetchPhotos() async {
-    try {
-      List<Photo> fetchedPhotos = await NetworkRequest.fetchPhotos();
-      setState(() {
-        photos = fetchedPhotos;
-      });
-    } catch (e) {
-      print('Error fetching photos: $e');
-    }
-  }
-
-  List<String> imageList = [];
   // Function to handle user logout
   Future<void> _signOut() async {
     try {
@@ -50,21 +33,6 @@ class _MyHomeState extends State<MyHome> {
       print('Error signing out: $e');
     }
   }
-
-  final List<BottomNavigationBarItem> _bottomNavigationBarItems = [
-    BottomNavigationBarItem(
-      icon: Icon(Icons.home),
-      label: 'Home',
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.search),
-      label: 'Search',
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.person),
-      label: 'Profile',
-    ),
-  ];
 
   @override
   Widget build(BuildContext context) {

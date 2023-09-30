@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:maku_app/Screen/previewAPI.dart';
 import 'package:maku_app/screen/homeScreen.dart';
 import 'package:maku_app/screen/loginScreen.dart';
 import 'package:maku_app/screen/otpScreen.dart';
@@ -40,7 +41,7 @@ class AuthWrapper extends StatelessWidget {
             return LoginScreen();
           } else {
             // User is logged in, navigate to home page
-            return MyHome();
+            return PracticePreviewAPI();
           }
         } else {
           // Handle loading state if needed

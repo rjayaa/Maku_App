@@ -4,7 +4,7 @@ import 'package:maku_app/model/photo.dart';
 import 'package:http/http.dart' as http;
 
 class NetworkRequest {
-  static String url = 'https://jsonplaceholder.typicode.com/photos';
+  static Uri url = Uri.parse('https://jsonplaceholder.typicode.com/photos');
 
   static List<Photo> parsePhotos(String responseBody) {
     var list = json.decode(responseBody) as List<dynamic>;
@@ -13,7 +13,7 @@ class NetworkRequest {
   }
 
   static Future<List<Photo>> fetchPhotos() async {
-    final response = await http.get('$url' as Uri);
+    final response = await http.get(url);
     if (response.statusCode == 200) {
       return compute(parsePhotos, response.body);
     } else {
